@@ -14,4 +14,22 @@ class Uihelper {
   static CustomText({required String text,required double height,Color? color,FontWeight? fontweight}) {
     return Text(text,style: TextStyle(fontSize: height,color: color??Color.fromRGBO(94, 94, 94, 1),fontWeight: fontweight),);
   }
+  static CustomContainers(TextEditingController controller) {
+    return Container(
+      height: 40,
+      width: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Color(0Xffd9d9d9a1)
+      ),
+      child: TextField(
+        textAlign: TextAlign.center,
+        textAlignVertical: TextAlignVertical.center,
+        controller: controller,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+        ),
+      ),
+    );
+  }
 }

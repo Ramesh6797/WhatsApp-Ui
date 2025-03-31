@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/Screens/OTP/otpscreen.dart';
 import 'package:whatsapp_ui/Widgets/Uihelper.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -41,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Padding(
             padding: const EdgeInsets.only(left: 60,right: 60),
             child: DropdownButtonFormField(items: countries.map((String country){
-              return DropdownMenuItem(child: Text(country.toString()),value: country,);
+              return DropdownMenuItem(value: country,child: Text(country.toString()),);
             }).toList(), onChanged: (value){
               setState(() {
                 selectedcountry=value!;
@@ -98,8 +101,18 @@ class _LoginScreenState extends State<LoginScreen> {
           )
         ],
       ),
-      floatingActionButton: Uihelper.CustomButton(callback: (){}, buttonname: "Next"),
+      floatingActionButton: Uihelper.CustomButton(callback: (){
+        login(phonecontroller.text.toString());
+      }, buttonname: "Next"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
+  }
+  login(String phonenumber) {
+    if(phonenumber == "") {
+      return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Enter Phone Number"),backgroundColor: Color(0XFF00A884),));
+    }
+    else {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> OTPscreen(phonenumber: phonenumber,)));
+    }
   }
 }
