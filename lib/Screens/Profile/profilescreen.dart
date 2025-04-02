@@ -57,29 +57,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )
             ),
             SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(
-                  width: 300,
-                  child: TextField(
-                    keyboardType: TextInputType.name,
-                    controller: namecontroller,
-                    decoration: InputDecoration(
-                      hintText: "Type your name here",
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0XFF00A884)),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0XFF00A884)),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: 300,
+                    child: TextField(
+                      keyboardType: TextInputType.name,
+                      controller: namecontroller,
+                      decoration: InputDecoration(
+                        hintText: "Type your name here",
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0XFF00A884)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Color(0XFF00A884)),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Image.asset("assets/images/smile.png"),
-                SizedBox(width: 20),
-              ],
+                  Image.asset("assets/images/smile.png"),
+                ],
+              ),
             ),
           ],
         ),
