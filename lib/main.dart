@@ -1,9 +1,18 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:whatsapp_ui/Screens/Home/homescreen.dart';
 import 'package:whatsapp_ui/Screens/Splash/splashscreen.dart';
+//import 'package:whatsapp_ui/firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(
+    DevicePreview(
+      builder: (context) => MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0XFF00A884)),
         useMaterial3: false,
-        fontFamily: "Regular"
+        fontFamily: "Regular",
       ),
       home: SplashScreen(),
     );
