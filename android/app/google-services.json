@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "577641740751",
+    "project_id": "fir-operations-48e43",
+    "storage_bucket": "fir-operations-48e43.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577641740751:android:1fe8b086ed25e068053aba",
+        "android_client_info": {
+          "package_name": "com.example.flutter_operation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWEjmwxIU73JCnFBo0UQE0856uCImzwLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577641740751:android:7d759b10b7f803e9053aba",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWEjmwxIU73JCnFBo0UQE0856uCImzwLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
